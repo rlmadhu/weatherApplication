@@ -1,0 +1,17 @@
+com\graphical\weather\gov\model\CreationDate.class
+com\graphical\weather\gov\model\Dwml.class
+com\graphical\weather\gov\model\Temperature.class
+com\graphical\weather\gov\model\ProductionCenter.class
+com\graphical\weather\gov\model\Product.class
+com\graphical\weather\gov\rest\WeatherReport.class
+com\graphical\weather\gov\model\Data.class
+com\graphical\weather\gov\model\Source.class
+com\graphical\weather\gov\model\Location.class
+com\graphical\weather\gov\model\MoreWeatherInformation.class
+com\graphical\weather\gov\RestServiceApplication.class
+com\graphical\weather\gov\model\Parameters.class
+com\graphical\weather\gov\model\Head.class
+com\graphical\weather\gov\model\Point.class
+com\graphical\weather\gov\model\Report.class
+com\graphical\weather\gov\service\WeatherReportService.class
+com\graphical\weather\gov\model\Time.class
