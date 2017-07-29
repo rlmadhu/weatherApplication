@@ -8,6 +8,7 @@ import java.util.List;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
@@ -16,6 +17,8 @@ import org.xml.sax.helpers.DefaultHandler;
 
 @Component
 public class ParseXML {
+	
+	Logger log = Logger.getLogger(ParseXML.class);
 
 	List<Integer> list = new ArrayList<Integer>();
 
@@ -61,7 +64,7 @@ public class ParseXML {
 					handler);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Exception in parsing xml output ... ");
 		}
 
 		return Collections.max(list);
