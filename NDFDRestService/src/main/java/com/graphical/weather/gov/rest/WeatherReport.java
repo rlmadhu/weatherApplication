@@ -9,6 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 import com.graphical.weather.gov.exception.ServiceException;
 import com.graphical.weather.gov.service.WeatherReportService;
+import com.graphical.weather.gov.constants.*;
 
 @RestController
 @RequestMapping(value = "/weather")
@@ -22,11 +23,12 @@ public class WeatherReport {
 	@RequestMapping(value = "/forecastMaxTemp", method = RequestMethod.GET)
 	public String forecastMaxTemp(@RequestParam String zipCodeList)
 			throws ServiceException {
+		StringBuffer maxtemp = new  StringBuffer(Constants.MAX_TEMP);
 		Integer forcastMaxTemp = service.forcastMaxTemp(zipCodeList);
 		if (forcastMaxTemp != null)
-			return String.valueOf(forcastMaxTemp);
+			return maxtemp.append(forcastMaxTemp.intValue()).toString();
 		else
-			return "Sorry there is an issue with Service";
+			return Constants.SERVICE_ERROR;
 	}
 
 }
