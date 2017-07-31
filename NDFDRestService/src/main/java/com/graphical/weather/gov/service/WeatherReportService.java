@@ -19,7 +19,7 @@ import com.graphical.weather.gov.exception.ServiceException;
 import com.graphical.weather.gov.parser.ParseXML;
 
 @Service
-public class WeatherReportService {
+public class WeatherReportService implements WeatherReport{
 	public static Logger log = Logger.getLogger(WeatherReportService.class);
 
 	@Autowired
@@ -42,7 +42,7 @@ public class WeatherReportService {
 	 * @return
 	 * @throws ServiceException
 	 */
-	public Integer forcastMaxTemp(String zipCodeList) throws ServiceException {
+	public Integer forecastMaxTemp(String zipCodeList) throws ServiceException {
 
 		URI targetUrl = populateParams(zipCodeList);
 		String response = null;
